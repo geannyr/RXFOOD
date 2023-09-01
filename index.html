@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raio X</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>RX Diário</h1>
+    </header>
+
+    <div class="container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket</th>
+                    <th>Status</th>
+                    <th>Possível Derivação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="ticket1"></td>
+                    <td>
+                        <select name="status1">
+                            <option value="Sem opção de derivação">Sem opção de derivação</option>
+                            <option value="Aguardando Retorno da Supervisão">Aguardando Retorno da Supervisão</option>
+                            <option value="Unificação">Unificação</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="derivacao1">
+                            <option value="N1 Food">N1</option>
+                            <option value="N2">N2</option>
+                            <option value="SOLVERS">Solvers</option>
+                            <option value="HORUS">HORUS</option>
+                        </select>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <div class="button-container">
+            <button class="button" id="generate-report">Adicionar ao relatorio</button>
+            <button class="button" id="clear-fields">Limpar Campos</button>
+
+        </div>
+
+        <div class="report-container">
+            <h3>Relatório Gerado</h3>
+            <textarea id="report-text" rows="10" cols="100" readonly></textarea>
+
+        </div>
+        <button class="button" id="copy-report">Copiar</button>
+        <button class="button" id="clear-report">Apagar</button>
+
+        </div>
+
+        <script type="text/javascript" src="javascript.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+
+    <footer>
+        &copy; Rx diário
+    </footer>
+</body>
+
+</html>
