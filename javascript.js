@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const derivacaoSelect = document.querySelector("select[name='derivacao1']").value;
 
         if (statusSelect !== "Aguardando Retorno da Supervisão" && statusSelect !== "Unificação") {
-        const reportLine = `Ticket: ${ticketInput}, Status: ${statusSelect}, Derivar para: ${derivacaoSelect}\n`;
+        const reportLine = ` ${ticketInput} - ${statusSelect} (${derivacaoSelect})\n`;
         reportText.value += reportLine;
         localStorage.setItem("reportContent", reportText.value);
 
     } else {
-        const reportLine = `Ticket: ${ticketInput}, Status: ${statusSelect}\n`;
+        const reportLine = ` ${ticketInput} - ${statusSelect}\n`;
         reportText.value += reportLine;
         localStorage.setItem("reportContent", reportText.value);
 
