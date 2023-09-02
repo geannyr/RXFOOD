@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const copyButton = document.getElementById("copy-report");
     const clearButton = document.getElementById("clear-report");
     const clearFieldsButton = document.getElementById("clear-fields");
+    const lineCount = document.getElementById("line-count"); // Elemento do contador
+
+    let lineNumber = 0;
+
 
     const savedContent = localStorage.getItem("reportContent");
 
@@ -32,16 +36,24 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("reportContent", reportText.value);
 
     }
+
+    lineNumber++; 
+    updateLineCount();
+
     });
 
-            copyButton.addEventListener("click", function () {
+    function updateLineCount() {
+        lineCount.textContent = `Casos presos: ${lineNumber}`;
+    }
+
+    copyButton.addEventListener("click", function () {
             reportText.select();
             document.execCommand("copy");
             reportText.setSelectionRange(0, 0);
             alert("Relatório copiado para a área de transferência!");
         });
 
-        clearButton.addEventListener("click", function () {
+    clearButton.addEventListener("click", function () {
             // Exibir uma caixa de diálogo de confirmação
             const confirmClear = window.confirm("Tem certeza de que deseja apagar todo o relatório?");
     
@@ -52,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        clearFieldsButton.addEventListener("click", function () {
+    clearFieldsButton.addEventListener("click", function () {
             // Limpe o campo de entrada de texto
             const ticketInput = document.querySelector("input[name='ticket1']");
             ticketInput.value = "";
