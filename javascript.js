@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 reportText.value = "";
                 localStorage.removeItem("reportContent");
             }
+            lineNumber = 0;
+            updateLineCount();
         });
 
     clearFieldsButton.addEventListener("click", function () {
