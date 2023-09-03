@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #c64652;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -41,7 +41,7 @@ th, td {
 }
 
 th {
-    background-color: #333;
+    background-color: #212529;
     color: #fff;
 }
 
@@ -70,7 +70,7 @@ th {
 .button {
     border-radius: 6px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #212529;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -98,5 +98,31 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
 }
+
+/* Estilos para o navbar */
+.navbar {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+    display: flex; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
